@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8">
+        <style>
+            .nav{
+                background-color:  	hotpink;
+                padding: 24px;
+                text-align: center;
+                font-size: 24px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #nav-item{
+                background-color: plum;
+                padding: 16px;
+                text-align: center;
+                
+                
+            }
+            a{
+                text-decoration: none;
+                color: rgb(87, 38, 3);
+            }
+            img{
+                height: 550px;
+                width: 100%;
+                margin-top: 5px;
+            }
+            h1{
+                text-align: center;
+                margin-top: 10px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: rgb(199, 70, 70);
+            }
+            h3{
+                text-align: right;
+                margin-top: 10px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: rgb(199, 70, 70);
+            }
+            #videos{
+                padding: 20px;
+                border: 1px dotted hotpink;
+                margin-left: 80px;
+                margin-right: 80px;
+                text-align: center;
+            }
+            #views{
+                padding: 10px;
+                background-image: url(./photos/video-bg.jpg);
+                height: 400px;
+                width: 250px;
+                margin: 20px;
+            }
+            .next{
+                font-size: 24px;
+                font-family:'Courier New', Courier, monospace;
+                border: 2px solid palevioletred;
+                padding: 10px;
+                background: rgb(248, 217, 233);
+                color: rgb(4, 122, 161);
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                }
+
+             .sticky + .content {
+                padding-top: 102px;
+                }
+    
+        </style>
+    </head>
+    <body style="margin: 0;" background="./photos/indexBg.jpg">
+        <div class="nav" id="myHeader">
+            <span id="nav-item"> <a href="./index.html"> <b>Home</b> </a>  </span>
+            <span id="nav-item"> <a href="./about.html"> <b>About</b> </a> </span>
+            <span id="nav-item"> <a href="./contact.html"> <b>Contact</b> </a>   </span>
+        
+        </div>
+        <div>
+            <img src="./photos/indexCover.jpg" alt="Cover">
+        </div>
+        <div>
+            <h1>Let's Watch Some Videos</h1>
+            <a href="#videos"><h1>&#8595</h1></a>
+        </div>
+        <div id="videos">
+            <h3>Page 3</h3>
+            <div>
+                <video controls id="views" preload="metadata">
+                    <source src="./videos/tahi17.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi18.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi19.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi20.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <video controls id="views" preload="metadata">
+                    <source src="./videos/tahi21.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi22.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi23.mp4" type="video/mp4">
+                </video>
+                <video controls id="views">
+                    <source src="./videos/tahi24.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <div>
+                <span><a class="next" href="./index.html"><b>1</b></a></span>
+                <span><a class="next" href="./index2.html"><b>2</b></a></span>
+                <span><a class="next" href="./index3.html"><b>3</b></a></span>
+                <span><a class="next" href="./index4.html"><b>4</b></a></span>
+                <span><a class="next" href="./index5.html"><b>5</b></a></span>
+                <span><a class="next" href="./index6.html"><b>6</b></a></span>              
+            </div>
+            <h3>Page 3</h3>
+        </div>
+        
+        <footer style="background: firebrick; height: 200px; width: 100%;">
+
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            </script>
+        
+    </body>
+</html>
